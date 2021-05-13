@@ -80,6 +80,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import './app.css';
+import {alert} from 'react-alert'
 
 const App = () => {
 
@@ -88,7 +89,7 @@ const App = () => {
 
     const formHandler = async (e) => {
         e.preventDefault()
-        alert(`You have successfully signed up with email ${email}`)
+        
         const response = await fetch("https://green-signup-backend.herokuapp.com/app/signup", {
             method: "POST",
             headers:{"Content-Type": "application/json"},
@@ -98,7 +99,7 @@ const App = () => {
             })
             
         })
-        
+        alert(`You have successfully signed up with email ${email}`)
         console.log(email)
         const data = await response.json()
         
