@@ -99,7 +99,6 @@ const App = () => {
             })
             
         })
-        window.alert(`You have successfully signed up with email ${email}`)
         console.log(email)
         const data = await response.json()
         
