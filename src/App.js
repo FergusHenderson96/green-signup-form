@@ -89,7 +89,7 @@ const App = () => {
     const formHandler = async (e) => {
         e.preventDefault()
 
-        const response = await fetch("http://localhost:5000/app/signup", {
+        const response = await fetch("https://green-signup-backend.herokuapp.com/app/signup", {
             method: "POST",
             headers:{"Content-Type": "application/json"},
             body: JSON.stringify({
