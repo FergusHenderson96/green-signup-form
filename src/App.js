@@ -89,7 +89,7 @@ const App = () => {
     const formHandler = async (e) => {
         e.preventDefault()
 
-        const response = await fetch("https://green-signup-backend.herokuapp.com/signup", {
+        const response = await fetch("https://green-signup-backend.herokuapp.com/app/signup", {
             method: "POST",
             headers:{"Content-Type": "application/json"},
             body: JSON.stringify({
@@ -98,6 +98,7 @@ const App = () => {
             })
             
         })
+        alert(`You have successfully signed up with email ${email}`)
         console.log(email)
         const data = await response.json()
         
