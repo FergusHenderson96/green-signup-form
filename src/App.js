@@ -24,7 +24,7 @@ onSubmit(e){
         email: this.state.email
     }
 
-    axios.post("http://localhost:4000/app/signup", registered)
+    axios.post("https://green-signup-backend.herokuapp.com/app/signup", registered)
     .then(res => console.log(res.data))
 
     this.setState({
