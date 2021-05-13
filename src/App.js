@@ -80,7 +80,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import './app.css';
-import {alert} from 'react-alert'
+import {Alert} from 'react-alert'
 
 const App = () => {
 
@@ -99,7 +99,7 @@ const App = () => {
             })
             
         })
-        alert(`You have successfully signed up with email ${email}`)
+        window.alert(`You have successfully signed up with email ${email}`)
         console.log(email)
         const data = await response.json()
         
