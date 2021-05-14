@@ -5,7 +5,7 @@ import './app.css';
 const App = () => {
 
     const [email, setEmail] = useState("")
-
+    const [complete, setComplete] = useState(false)
 
     const formHandler = async (e) => {
         e.preventDefault()
@@ -22,6 +22,7 @@ const App = () => {
         window.alert(`Thanks, you have successfully signed up for Green with email - ${email}`)
         console.log(email)
         const data = await response.json()
+        setComplete(true)
     }
 
         return (
@@ -34,7 +35,16 @@ const App = () => {
                     <div className="form">
                         <div className="title">
                         <h1>Welcome to Green.</h1>
+                        {complete ? (
+                        <div>
+                        <p className="success">Congrats, you have successfully signed up to Green with email: {email}</p>
+                        </div>
+                        ) : (
+                        <div>
                         <p>Please enter your email below</p>
+                        </div>
+                        )}
+                        
                         </div>
                         
                         <form onSubmit={formHandler}>
@@ -53,7 +63,7 @@ const App = () => {
                             <div className="submit">
                             <input type="submit"
                             value="Sign In"/>
-                        </div>    
+                        </div>  
                         </form>
                     </div>
                 </div>

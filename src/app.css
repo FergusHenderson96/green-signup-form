@@ -94,4 +94,13 @@ div.submit input {
   background: #fff;
   border: 0.5px solid #eeeeee;
 }
+
+div.submit .success {
+  background-color: #fff;
+  height: 200px;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=app.css.map */
