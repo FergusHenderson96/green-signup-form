@@ -19,9 +19,9 @@ const App = () => {
             })
             
         })
+        window.alert(`Thanks, you have successfully signed up for Green with email - ${email}`)
         console.log(email)
         const data = await response.json()
-        
     }
 
         return (
